@@ -1,0 +1,125 @@
+{% extends 'home.html' %}
+{% load static %}
+{% block body %}
+<style>
+    .button {
+      background-color: #4CAF50; /* Green */
+      border: none;
+      color: white;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      cursor: pointer;
+      border-radius: 10px;
+    }
+    
+    .button:hover {
+      background-color: #45a049;
+    }
+</style>
+<div class="container" style = "margin-top : 50px ; background-color: #9896f1" id="print-content">
+    <h1 class=" text-center" style="background-color: #9896f1 ; font-family: 'Monotype Corsiva'; color: #E6120E; font-size: 84px; font-weight: 700; margin-bottom: 0px ; width: 1125px">About Us</h1>
+    <div style="padding:10px ; background-color: #1f6f78 ; margin-bottom: 10px">
+    </div>
+
+      <div class="row">
+        
+          <div class="col-sm-4" style="background-color: powderblue">
+              <img src="{% static 'images/train1.jpg' %}" width=350 height = 250 class="img-responsive">
+              <br><br>
+              <p style="font-family: 'georgia' ; font-weight: 840 ; font-size: 20px">Certainly! India boasts several iconic trains 
+                that traverse its diverse landscapes. Here are some of the most notable ones:
+              </p>
+              <p>
+                <h3 style="font-family: 'system-ui' ; font-size: 25px ; font-weight: 920 ; color: red">1. Vivek Express:</h3>
+                <p style="font-style: italic ; font-family: "Gill Sans", sans-serif ; font-weight: 1200 ; font-size: 17px">The Dibrugarh-Kanyakumari Express, also known as Vivek Express, holds the distinction of being the longest-running train in India.</p>
+              </p>
+              <p>
+                <h3 style="font-family: 'system-ui' ; font-size: 25px ; font-weight: 920 ; color: red">2. Himsagar Express:</h3>
+                <p style="font-style: italic ; font-family: "Gill Sans", sans-serif ; font-weight: 840 ; font-size: 17px">The Himsagar Express traverses the entire length of India, from Kashmir to Kanyakumari.</p>
+              </p>
+              <p>
+                <h3 style="font-family: 'system-ui' ; font-size: 25px ; font-weight: 920 ; color: red">3. Palace on Wheels Express:</h3>
+                <p style="font-style: italic ; font-family: "Gill Sans", sans-serif ; font-weight: 840 ; font-size: 17px">For a luxurious experience, the Palace on Wheels is a regal train that takes you on a royal journey through Rajasthan.</p>
+              </p>
+              <p>
+                <h3 style="font-family: 'system-ui' ; font-size: 25px ; font-weight: 920 ; color: red">4. Maharaja Express:</h3>
+                <p style="font-style: italic ; font-family: "Gill Sans", sans-serif ; font-weight: 840 ; font-size: 17px">Known as one of the most luxurious trains in the world, the Maharaja Express offers several itineraries covering destinations like Agra, Jaipur, Varanasi, and Khajuraho.</p>
+              </p>
+              <p>
+                <h3 style="font-family: 'system-ui' ; font-size: 25px ; font-weight: 920 ; color: red">5. Golden Chariot Express:</h3>
+                <p style="font-style: italic ; font-family: "Gill Sans", sans-serif ; font-weight: 840 ; font-size: 17px">This luxury train explores the southern states of India, including Karnataka, Tamil Nadu, and Kerala.</p>
+              </p>
+          </div>
+
+
+          <div class="col-sm-8" style = "background-color: #AEC6CF ; font-weight : bold">
+            <p>Indian Railways, the fourth largest railway network in the world,
+             is continuously evolving to meet the demands of its passengers and enhance its services.
+             Indian Railways, the lifeline of the nation, is a vast network that weaves through the diverse tapestry of India. 
+             It's the world's fourth-largest railway system, with a route length of 68,426 km and a running track length of 104,647 km 
+             as of 2023. More than 1.2 million employees work tirelessly to keep it running, making it India's second-largest employer. 
+             From the steam engines of the past to the electric trains of today, 
+             Indian Railways continues to be an integral part of India's growth and development.
+              Here are some of the latest updates:</p>
+
+                <h2>Summer Special Trains:</h2> 
+                    <p>To accommodate the increased travel demand during the summer season, 
+                        Indian Railways has decided to extend the run of additional summer special 
+                        train services between Mumbai and Bhubaneswar.
+                    </p>
+
+                <h2>Stock Market Movement:</h2> 
+                    <p>Railway stocks have recently experienced a dip, 
+                        despite the long-term positive outlook for the sector. 
+                        This is attributed to the government's ongoing efforts to transform the railway industry.
+                    </p>
+
+                <h2>Disaster Management:</h2> 
+                    <p>A new initiative by the Ministry of Railways includes incorporating live video communication 
+                        from accident sites into their Disaster Management protocol. This groundbreaking move aims 
+                        to expedite rescue, relief, and management efforts during train accidents.
+                    </p>
+
+               <h2>Vande Bharat Metro:</h2> 
+                    <p>The first Vande Bharat Metro train set has been rolled out from the Rail Coach Factory in Kapurthala, Punjab. 
+                        These trains are designed for short distances, with a range of 100-250 km, and are expected to undergo testing in July. 
+                        The initial plan is to introduce 50 trains, with the potential to expand to 400, connecting major cities.
+                    </p>
+
+                <h2>Freight Loading:</h2> 
+                    <p>Indian Railways has reported a 1.46% increase in freight loading in April 2024 compared to the previous year. 
+                        This includes various commodities such as coal, iron ore, steel, cement, and food grains, indicating the vital 
+                        role of railways in the country's logistics and supply chain.
+                    </p>
+
+These updates reflect Indian Railways' commitment to improving its services and infrastructure, ensuring safety, and contributing to the nation's economic growth.
+
+          </div>
+      </div>
+
+  </div>
+  <script type="text/javascript">
+    function printDiv(divName) {
+        var prtContent = document.getElementById("print-content");
+            var WinPrint = window.open('', '', 'left=0,top=0,width=800,height=900,toolbar=0,scrollbars=0,status=0');
+            WinPrint.document.write(prtContent.innerHTML);
+            WinPrint.document.close();
+            WinPrint.focus();
+            WinPrint.print();
+            WinPrint.close();
+    }
+</script>
+<br>
+    <div style= "text-align: center">
+        <input class="button" onclick="printDiv('print-content')" value="Print"/>
+    </div>
+    <br>
+    <br>
+
+  
+
+{% endblock %}
